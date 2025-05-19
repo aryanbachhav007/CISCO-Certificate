@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vCard - Personal Portfolio</title>
+  <link rel="stylesheet" href="portfolio_1.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside>
+    <h1><br></br>Aryan Dushyant Bachhav</h1>
+    <p>Web developer</p>
+    <ul>
+      <li>Email: aryanbachhav99@gmail.com</li>
+      <li>Phone: +91 7620953020</li>
+      <li>Birthday: November 28, 2006</li>
+      <li>Location: Pune, Maharashtra, India</li>
+    </ul>
+  </aside>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div id="main-content">
+
+    <!-- About -->
+    <section id="about">
+      <h2>About me</h2>
+      <p>
+        I'm a Computer Engineering student and a brilliant developer from Pune, India, working in web development. I enjoy turning complex problems into simple, beautiful, and intuitive designs.
+      </p>
+      <p>
+        I'm passionate and dedicated to Computer Engineering, with a strong interest in technological innovation, sustainability, and problem-solving.
+      </p>
+      <p>
+        My curiosity and creativity have driven me to explore various interdisciplinary domains like Communications & Networking, Cybersecurity, and design optimization. 
+        Qualification: MHT CET – I scored a percentile of 93.63%.
+      </p>
+      <p>"Great engineering isn’t just built — it’s imagined, tested, and refined through persistence."</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>What I'm doing</h2>
+      <ul>
+        <li>
+          <h3>Engineering</h3>
+          <p>The most modern and high-quality degree made at a professional level.</p>
+        </li>
+        <li>
+          <h3>Computer Engineering</h3>
+          <p>High-quality development of webpages.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- My Skills -->
+    <section id="my-skills">
+      <h2>My skills</h2>
+      <article><h3>C</h3></article>
+      <article><h3>Python</h3></article>
+      <article><h3>Tableau</h3></article>
+      <article><h3>HTML</h3></article>
+      <article><h3>CSS</h3></article>
+      <article><h3>Linux</h3></article>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2>Timeline</h2>
+      <article>
+        <p><strong>2023 – Started B.E. in Computer Engineering</strong><br>Enrolled at MIT AOE, ALANDI, diving deep into core engineering subjects.</p>
+        <p><strong>2024 – First Major Project</strong><br>Led a team to build an advanced calculator using Linux.</p>
+      </article>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" name="from_name" placeholder="Full Name" required />
+        <input type="email" name="from_email" placeholder="Email Address" required />
+        <textarea name="message" placeholder="Let me know how I can help with your project!" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("bK9mkUmW8BwvnzksZ"); // 🔁 Replace with your public key
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_nxnqh4l", "template_sbtoruv", this) // 🔁 Replace these
+        .then(function(response) {
+          alert("Message sent successfully!");
+        }, function(error) {
+          alert("Failed to send message. Please try again.");
+        });
+    });
+  </script>
+
+</body>
+</html>
